@@ -1,0 +1,44 @@
+body{
+    background-color: #6ddccf96;
+}
+
+.header
+{
+    background-color: #212121;
+    
+}
+
+
+.x{
+    
+    text-decoration: none;
+}
+
+.x:hover {
+    background-color: #323232;
+    text-decoration: underline;
+  }
+
+.logo
+{
+    height: 5%;
+    width: 5%;
+}
+
+
+.platform:hover
+{
+background-color: rgba(247, 240, 230, 0.308);
+padding-right: 2%;
+padding-bottom: 2%;
+padding-top: 2%;
+
+}
+
+.phead{
+ border-bottom: 2px solid black;
+ width: 102%;
+}
+
+
+

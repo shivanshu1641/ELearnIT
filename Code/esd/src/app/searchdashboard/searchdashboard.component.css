@@ -1,0 +1,24 @@
+.logo
+{
+    height: 20%;
+    width: 20%;
+}
+
+.header
+{
+    background-color: #212121;
+    
+}
+
+
+.x{
+    
+    text-decoration: none;
+}
+
+.x:hover {
+    background-color: #323232;
+    text-decoration: underline;
+  }
+
+

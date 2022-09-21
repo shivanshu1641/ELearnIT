@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+    <title>ELearnIT</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+</head>
+<body>
+    <div>
+        <div class="header-blue bg-dark" >
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+                <div class="container-fluid"><a class="navbar-brand" href="#" style="font-size: 2.3vw; "> <img src=".\assets\img\logo.gif" alt="" class='logo' > &#160; ELearnIT</a>
+                    <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        
+                        <form class="form-inline mr-auto" target="_self" [formGroup] = "value" (ngSubmit)=search() >
+                            <div class="form-group"><label for="search-field"><button class="btn btn-light action-button " role="button" type="submit" ><i class="fa fa-search"></i></button></label><input class="form-control search-field" type="search" id="search-field" name="search" formControlName="search"></div>
+                        </form>
+                        <span class="navbar-text"> <a class="login" href="/"></a></span>
+                        <a class="btn btn-light action-button " role="button" href="/home">Logout {{name}}</a></div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+
+
+
+        <div class="features-boxed">
+                <div class="row justify-content-lg-right features main" >
+                    <div class="col-sm-6 col-md-5 col-lg-3 item" *ngFor= "let data of resdata">
+                        <div class="box "><img class="miniImg" src="./assets/img/dbimages/{{data.file}}" alt="ProductImage"/>
+                            <br><br>
+                           <div class='info'> 
+                            <h2 class="name">{{data.category}}</h2>
+                            <h3 class="name">{{data.title}}</h3>
+                            
+                            <p class="description">{{data.description}}</p>
+                            <a class="btn btn-light action-button buy"  target="_blank" href='{{data.price}}'> Visit Website</a></div>
+                           
+
+                        </div>
+                    </div>
+                    <br><br> <br><br>
+               </div>
+               
+        </div>
+     
+        
+        
+    
+
+    
+    <section id='foot1'>
+        <footer class="bg-dark" id="tempaltemo_footer">
+            <div class="container">
+                <div class="row">
+      
+                    <div class="col-md-4 pt-5">
+                        <h2 class="h2 border-bottom pb-3 border-light logo" style="color: #37CCAF ;">ELearnIT</h2><br>
+                        <ul class="list-unstyled text-light footer-link-list">
+                            <li>
+                                <i class="fas fa-map-marker-alt fa-fw"></i>
+                                Thakur College of Engineering
+                            </li>
+                            <li>
+                                <i class="fa fa-phone fa-fw"></i>
+                                <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-envelope fa-fw"></i>
+                                <a class="text-decoration-none" href="mailto:info@company.com">info@ELearnIT.com</a>
+                            </li>
+                        </ul>
+                    </div>
+      
+                    <div class="col-md-4 pt-5">
+                        <h2 class="h2 text-light "></h2>
+                        <ul class="list-unstyled text-light footer-link-list">
+                            
+                        </ul>
+                    </div>
+      
+                    <div class="col-md-4 pt-5">
+                        <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                        <ul class="list-unstyled text-light footer-link-list">
+                            <li><a class="text-decoration-none" href="#">Home</a></li>
+                            <li><a class="text-decoration-none" href="/register">Register</a></li>
+                            <li><a class="text-decoration-none" href="/login">Login</a></li>
+                            <li><a class="text-decoration-none" href="#">FAQs</a></li>
+                            <li><a class="text-decoration-none" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+      
+                </div>
+      
+                <div class="row text-light mb-4">
+                    <div class="col-12 mb-3">
+                        <div class="w-100 my-3 border-top border-light"></div>
+                    </div>
+                    <div class="col-auto me-auto">
+                        <ul class="list-inline text-left footer-icons">
+                            <li class="list-inline-item border border-light rounded-circle text-center">
+                                <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            </li>
+                            <li class="list-inline-item border border-light rounded-circle text-center">
+                                <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                            </li>
+                            <li class="list-inline-item border border-light rounded-circle text-center">
+                                <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                            </li>
+                            <li class="list-inline-item border border-light rounded-circle text-center">
+                                <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-auto">
+                        <label class="sr-only" for="subscribeEmail">Email address</label>
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+                            <div class="input-group-text btn-success text-light">Subscribe</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="w-100 bg-black py-3">
+                <div class="container">
+                    <div class="row pt-2">
+                        <div class="col-12">
+                            <p class="text-left text-light">
+                                Copyright &copy; 2021 ELearnIT
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+        </footer>
+        
+    </section>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

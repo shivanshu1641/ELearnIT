@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+     <!-- Header -->
+ 	<nav class="navbar navbar-expand-lg navbar-light shadow header">
+		<div class="container d-flex justify-content-between " style="box-shadow: none;">
+  
+			  <img src=".\assets\img\logo.gif" alt="" class='logo'> 
+			  <a class="navbar-brand logo h1 align-self-center" style="color: #37CCAF;" href="index.html">
+  
+				&#160;
+   ELearnIT
+		 </a>
+ 
+			<div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-right" id="templatemo_main_nav">
+				<div class="flex-fill" style='position:absolute ;right:2%; margin: 5%;'>
+					<ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto " >
+					
+						<li class="nav-item headerNav"> 
+							<a class="nav-link x" routerLink="/home"  style="color: #14ffec;">  &#160;Home  &#160;</a>
+						</li>
+						<li class="nav-item headerNav">
+							<a class="nav-link x" href="/login"  style="color: #14ffec;">  &#160;Login  &#160;</a>
+						</li>
+						<li class="nav-item headerNav">
+							<a class="nav-link x " href="/register"  style="color: #14ffec;">  &#160;Register  &#160;</a>
+						</li>  
+					</ul>
+				</div>
+			   
+			</div>
+  
+		</div>
+	</nav>
+
+
+<!-- Close Header -->
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container contUp">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form [formGroup] = "addCust" (ngSubmit)=addCustomer() method="POST" class="register-form" id="register-form" >
+                            <div class="form-group">
+                                <label for="username">&#160;&#160;<i style="color: #02cfbe;" class="zmdi zmdi-email"></i></label>
+                                <input type="text" name="username" id="email" placeholder="Your Username" formControlName = "username"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">&#160;&#160;<i style="color: #02cfbe;" class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="password" id="pass" placeholder="Password" formControlName = "password"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass">&#160;&#160;<i style="color: #02cfbe;"class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" formControlName = "cpassword"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term"  formControlName = "cbox"/>
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="assets/img/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="/login" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </div>
+    <footer class="bg-dark" id="tempaltemo_footer">
+  
+        <div class="w-100 bg-black py-3">
+            <div class="container" style="box-shadow: none;">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2021 ELearnIT
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </footer>
+    <!-- JS -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

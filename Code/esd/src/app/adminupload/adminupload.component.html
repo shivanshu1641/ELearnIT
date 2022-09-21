@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="adminupload.component.css" >
+    <title>Course Insert</title>
+</head>
+<body>
+    <div class="container entry">
+        <H1  class="mb-4">ELearnIT</H1>
+
+        <form [formGroup] = "upload" (ngSubmit)=uploadpro() action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="category">Platform</label>
+                <input required type="text"  name="category"  id="category" class="form-control" formControlName = "category">
+            
+            </div><br>
+            <div class="form-group">
+                <label for="title">Course Name</label>
+                <input required type="text" name="title" id="title" class ="form-control" formControlName = "title">
+            
+            </div><br>
+            
+            <div class="form-group">
+                <label for="description">Course Description</label>
+                <textarea name="description"  id="description" class="form-control" formControlName = "description"></textarea>
+            
+            </div><br>
+            <div class="form-group">
+                <label for="markdown">Link of Course</label>
+                <textarea required name="markdown" id="markdown"  class="form-control" maxlength="150" formControlName = "markdown"></textarea>
+            
+            </div><br>
+            
+            <div class="form-group">
+                <label for="file">Upload File for Logo</label>
+                <!--<input type="file" id='thefile' name='thefile' formControlName = "thefile">-->
+                <input #fileInput type="file"/>
+            
+            </div><br>
+        <div class='button'>
+            
+            <a  class="btn btn-secondary" (click) = "adminhome()">Go Back</a>
+            <button style="margin: 4mm;" type="submit" class="btn btn-secondary">Save</button>
+        </div>
+          
+
+        </form>
+    </div>
+</body>
+</html>
